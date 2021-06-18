@@ -3,7 +3,7 @@ MediaWikiで、ページタイトルと見出し名を指定したとき、そ�
 
 ## 使用方法
 
-1. ディレクトリに下記ファイルを追加する。
+1. リポジトリに下記ファイルconfig.plを追加する。
 ```Perl:config.pl
 use utf8
 
@@ -23,7 +23,10 @@ use utf8
         "name" => XXX,
         # パスワード
         "password" => XXX
-    },    
+    },
+
+    # ページ検索用のキーワード. find.plで使用
+    "find_word" => "Perl"
 }
 ```
 
@@ -40,3 +43,7 @@ config.pl記入のあとに、次のコマンドを叩く。
 ```
 perl login.pl
 ```
+
+### find.pl
+
+ページ検索用スクリプト。1件しか情報を取得しない
